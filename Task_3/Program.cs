@@ -51,7 +51,7 @@ int CheckPositiveNumber(string text)
     return number;
 }
 
-int AkkermanFunction(int M, int N)
+int AckermannFunction(int M, int N)
 {
     if (M == 0)
     {
@@ -59,10 +59,10 @@ int AkkermanFunction(int M, int N)
     }
     else if (M > 0 && N == 0)
     {
-        return AkkermanFunction(M - 1, 1);
+        return AckermannFunction(M - 1, 1);
     }
     else
-        return AkkermanFunction(M - 1, AkkermanFunction(M, N - 1));
+        return AckermannFunction(M - 1, AckermannFunction(M, N - 1));
 }
 
 // Код задачи
@@ -80,7 +80,7 @@ if (M == 0 && N == 0)
 
 Console.ForegroundColor = ConsoleColor.DarkCyan;
 
-System.Console.WriteLine($"\nЗначение функции Аккермана для двух неотрицательных чисел М ({M}) и N ({N}) равно : {AkkermanFunction(M, N)}\n");
+System.Console.WriteLine($"\nЗначение функции Аккермана для двух неотрицательных чисел М ({M}) и N ({N}) равно : {AckermannFunction(M, N)}\n");
 
 Console.ResetColor();
 
