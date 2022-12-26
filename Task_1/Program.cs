@@ -48,14 +48,14 @@ int CheckNatural(string text)
     return number;
 }
 
-// Код задачи
-
 void OutNumbers(int number)
 {
     if (number == 0) return;
     System.Console.Write(number + " ");
     OutNumbers(number - 1);
 }
+
+// Код задачи
 
 int number = CheckNatural("Введите натуральное число: ");
 
