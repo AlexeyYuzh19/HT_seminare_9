@@ -57,12 +57,10 @@ int AkkermanFunction(int M, int N)
     {
         return N + 1;
     }
-
     else if (M > 0 && N == 0)
     {
         return AkkermanFunction(M - 1, 1);
     }
-
     else
         return AkkermanFunction(M - 1, AkkermanFunction(M, N - 1));
 }
