@@ -78,19 +78,22 @@ int SummaNaturalNumbers(int M, int N)
     {
         return N;
     }
-    return (N+SummaNaturalNumbers(M, N+1)); 
+    return (N + SummaNaturalNumbers(M, N + 1));
 }
 
 // Код задачи
 
 int M = CheckNatural("Введите первое натуральное число : ");
+
 metka:
 int N = CheckNatural("Введите второе натуральное число : ");
+
 if (M == N)
 {
     System.Console.WriteLine("Числа равны, повторите ввод второго числа.");
     goto metka;
 }
+
 if (!Merge(M, N))
 {
     Swap(M, N, out int C, out int D);
@@ -103,7 +106,7 @@ System.Console.WriteLine($"\nBсе натуральные числа в пром
 
 NaturalNumbers(N, M);
 
-System.Console.WriteLine($"\n\nСумма натуральных элементов в промежутке от {M} до {N} равна : {SummaNaturalNumbers(N,M)}\n");
+System.Console.WriteLine($"\n\nСумма натуральных элементов в промежутке от {M} до {N} равна : {SummaNaturalNumbers(N, M)}\n");
 Console.ResetColor();
 
 
